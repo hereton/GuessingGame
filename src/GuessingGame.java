@@ -83,7 +83,12 @@ public class GuessingGame {
 		return this.secretNumber;
 	}
 
-	public int getCount(){
+	/**
+	 * Return a user guessed number
+	 * 
+	 * @return a user guessed number
+	 */
+	public int getCount() {
 		return this.count;
 	}
 
