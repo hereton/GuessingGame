@@ -1,10 +1,17 @@
 import java.util.Scanner;
+
+/**
+ * 
+ * @author hereton
+ *
+ */
 public class GameConsole {
-	
-	
+
 	/**
 	 * the play method play a game using input from a user.
-	 * @param game is variable to run GuessingGame class.
+	 * 
+	 * @param game
+	 *            is variable to run GuessingGame class.
 	 * @return return a collect answer.
 	 */
 	public int play(GuessingGame game) {
@@ -16,18 +23,19 @@ public class GameConsole {
 		boolean start = true;
 		int input = 0;
 		System.out.println(game.getHint());
-		while(start){
+		while (start) {
 			System.out.println(promptString);
 			input = scanner.nextInt();
-			
-			if(game.guess(input) == false){
+
+			if (game.guess(input) == false) {
 				System.out.println(game.getHint());
-			}else{
+			} else {
 				start = false;
 			}
 		}
 		System.out.println(game.getHint());
+		System.out.println("Number of your guessed = " + game.getCount());
 		return input;
-		
+
 	}
 }
