@@ -3,7 +3,7 @@ import java.util.Random; //for random numbers
 /**
  * game of guessing a secret number
  * 
- * @author hereton
+ * @author totsapon menkul
  *
  */
 public class GuessingGame {
@@ -50,16 +50,19 @@ public class GuessingGame {
 	 */
 	public boolean guess(int guessNumber) {
 		// test user input number
-		if (guessNumber == secretNumber) {
+		if (guessNumber == secretNumber) 
+		{
 			this.hint = "Correct.  The secret number is " + secretNumber;
 			return true;
-		} else if (guessNumber > secretNumber) {
+		} 
+		else if (guessNumber > secretNumber) 
+		{
 			this.hint = "Sorry, your guess is too big";
-			count += 1;
 			return false;
-		} else {
+		} 
+		else 
+		{
 			this.hint = "Sorry, your guess is too small";
-			count += 1;
 			return false;
 
 		}

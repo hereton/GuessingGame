@@ -3,9 +3,12 @@ import java.util.Scanner;
 /**
  * 
  * @author hereton
- *
+ * @version 1/26/2017
  */
 public class GameConsole {
+
+	/** initialize count to count guessed times. */
+	private int count;
 
 	/**
 	 * the play method play a game using input from a user.
@@ -26,6 +29,7 @@ public class GameConsole {
 		while (start) {
 			System.out.println(promptString);
 			input = scanner.nextInt();
+			count += 1;
 
 			if (game.guess(input) == false) {
 				System.out.println(game.getHint());
@@ -34,7 +38,7 @@ public class GameConsole {
 			}
 		}
 		System.out.println(game.getHint());
-		System.out.println("Number of your guessed = " + game.getCount());
+		System.out.println("Number of your guessed = " + count);
 		return input;
 
 	}
