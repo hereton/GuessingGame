@@ -1,6 +1,6 @@
 /**
  * Create a main class to launch the program.
- * @author hereton
+ * @author Totsapon menkul
  *
  */
 public class Main {
